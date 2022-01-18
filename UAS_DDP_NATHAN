@@ -1,0 +1,98 @@
+//Tugas UAS membuat program dengan C++
+//Nama : Putu Nathan Lesmana Kadee
+//NIM  : 2101020050
+//Prodi: IF
+#include<iostream>
+#include<limits>
+#include<stdio.h>
+
+using namespace std;
+
+int
+main ()
+{
+
+  string name, id;
+  float grade1, grade2, grade3, finalresult;
+
+  cout << endl;
+  cout <<
+    "=====================================================================================";
+  cout << endl;
+  cout <<
+    "Honourable student's please fill out the required info bellow to see your final grade!";
+  cout << endl;
+  cout <<
+    "=====================================================================================";
+  cout << endl;
+
+  cout << endl;
+  cout << "===============[ Please fill the required information bellow ]=================";
+  cout << endl;
+  cout << "Input Name : ";
+  cin >> name;
+
+   cout << "Input ID  : ";
+    int x = 0;
+    while(!(cin >> x)){
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cout << " invalid ID please try again : ";
+        cin >> id;
+    }
+  cout << "===============================================================================";
+  cout << endl;
+  cout << endl;
+  cout << "===============================================================================";
+  cout << endl;
+  cout << "=========[ Please fill out the required informtaion for your result! ]=========";
+  cout << endl;
+  cout << "===============================================================================";
+  cout << endl;
+  cout << "Input First Semester Result : ";
+  cin >> grade1;
+
+  cout << "Input Second Semester Result : ";
+  cin >> grade2;
+
+  cout << "Input Final Exam Result : ";
+  cin >> grade3;
+  cout << "=================================================================================";
+  cout << endl;
+  
+  cout << endl;
+  cout << "=================================================================================";
+  cout << endl;
+
+  finalresult = (grade1 * 0.2 + grade2 * 0.4 + grade3 * 0.4);
+  if (finalresult >= 85 && finalresult <= 100)
+    {
+      cout << name << " Congratulations you got an A" << endl;
+    }
+  else if (finalresult >= 75 && finalresult <= 85)
+    {
+      cout << name << " Congratulations you got a B" << endl;
+    }
+  else if (finalresult >= 65 && finalresult <= 75)
+    {
+      cout << name << " We are sorry to inform you but you got a C" << endl;
+    }
+  else if (finalresult >= 40 && finalresult <= 65)
+    {
+      cout << name << " You need to take the test seriously! you got a D" <<
+	endl;
+    }
+  else if (finalresult >= 0 && finalresult <= 40)
+    {
+      cout << name <<
+	" we have nothing to say other than the fact that you got an E" <<
+	endl;
+    }
+
+  cout << endl;
+  cout << "you have received : " << finalresult << " as your final result!" <<
+    endl;
+  cout << "=================================================================================";
+  cout << endl;
+
+}
